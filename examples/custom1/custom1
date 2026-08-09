@@ -1,0 +1,7 @@
+# Custom example 1 - terminates when resources consumed
+flour:10
+sugar:5
+eggs:12
+make_dough:(flour:2;sugar:1;eggs:2):(dough:1):5
+bake_cake:(dough:1):(cake:1):45
+optimize:(time;cake)

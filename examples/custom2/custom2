@@ -1,0 +1,7 @@
+# Custom example 2 - infinite rotation
+water:10
+seed:1
+plant_tree:(seed:1;water:5):(tree:1):100
+harvest_seed:(tree:1):(seed:3;wood:1):50
+extract_water:(wood:1):(water:10):20
+optimize:(time;wood)

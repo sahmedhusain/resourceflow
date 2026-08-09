@@ -1,0 +1,7 @@
+# build example
+board:7
+do_doorknobs:(board:1):(doorknobs:1):15
+do_background:(board:2):(background:1):20
+do_shelf:(board:1):(shelf:1):10
+do_cabinet:(doorknobs:2;background:1;shelf:3):(cabinet:1):30
+optimize:(time;cabinet)

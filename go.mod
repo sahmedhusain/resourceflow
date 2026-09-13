@@ -1,3 +1,3 @@
-module stock-exchange-sim
+module resourceflow
 
 go 1.26.5

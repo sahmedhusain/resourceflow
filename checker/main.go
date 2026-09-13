@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"stock-exchange-sim/pkg/models"
-	"stock-exchange-sim/pkg/parser"
+	"resourceflow/pkg/models"
+	"resourceflow/pkg/parser"
 )
 
 type LogEvent struct {

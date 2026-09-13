@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"stock-exchange-sim/pkg/models"
+	"resourceflow/pkg/models"
 )
 
 func ParseFile(filePath string) (*models.Config, error) {

@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	"stock-exchange-sim/pkg/models"
+	"resourceflow/pkg/models"
 )
 
 type Event struct {

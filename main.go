@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"stock-exchange-sim/internal/simulator"
-	"stock-exchange-sim/pkg/parser"
+	"resourceflow/internal/simulator"
+	"resourceflow/pkg/parser"
 )
 
 func main() {

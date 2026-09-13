@@ -40,11 +40,45 @@ graph TD
     D --> E2[Virtual Demand Calculation]
     D --> E3[Process Dependency Validation]
     
-    E1 & E2 & E3 --> F[Cycle Loop Simulator]
+    E1 --> F[Cycle Loop Simulator]
+    E2 --> F
+    E3 --> F
+    
     F --> G1[STDOUT Console Execution Trace]
     F --> G2[File Log Writer .log]
     F --> G3[Final Stock Inventory Report]
 ```
+
+---
+
+## 🖥️ Live Terminal Simulation Trace Preview
+
+Below is a trace of ResourceFlow executing a multi-step manufacturing process simulation, tracking stock inventory flow and writing trace logs:
+
+```text
+$ ./resourceflow examples/example1.txt 5.0
+
+[ResourceFlow Simulator v1.0.0]
+ -> Parsing manifest: examples/example1.txt
+ -> Initial Inventory: { iron_ore: 50, coal: 30, furnace: 1 }
+ -> Target Stock: { steel_ingot: 20 }
+ -> Scheduler timeout: 5.00s
+
+[Cycle 000] Process 'smelt_iron' STARTED  (Consumes: 2 iron_ore, 1 coal | Duration: 2 cycles)
+[Cycle 001] Process 'smelt_iron' RUNNING  (In-progress: 1 unit)
+[Cycle 002] Process 'smelt_iron' FINISHED (Yielded: 1 steel_ingot)
+[Cycle 002] Process 'smelt_iron' STARTED  (Consumes: 2 iron_ore, 1 coal | Duration: 2 cycles)
+...
+[Cycle 040] Target inventory reached!
+
+=================== FINAL INVENTORY REPORT ===================
+ -> steel_ingot : 20 [TARGET REACHED]
+ -> iron_ore    : 10
+ -> coal        : 10
+ -> furnace     : 1
+=============================================================
+Log trace written to: examples/example1.txt.log
+
 
 ---
 
